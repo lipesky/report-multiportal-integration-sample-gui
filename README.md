@@ -4,6 +4,10 @@ A simple application(POC) for extending reporting features of Multi Portal dashb
 
 OBS: As it is a POC (proof of concept), there are many points that can be improoved. That will be detailed in "Improvements" section.
 
+![Screenshot_20250212_011718](https://github.com/user-attachments/assets/31010565-e00f-464b-a90a-d1afa0222e56)
+![Screenshot_20250212_013259](https://github.com/user-attachments/assets/b65e346f-0f90-4928-b69a-5df3d790c702)
+
+
 ## How it works
 
 - User logs in
