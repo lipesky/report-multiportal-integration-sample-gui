@@ -1,50 +1,20 @@
-# React + TypeScript + Vite
+# Sample Multiportal Report GUI
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A simple application(POC) for extending reporting features of Multi Portal dashboard solution, giving powerful insights. This GUI uses ReactJS
 
-Currently, two official plugins are available:
+OBS: As it is a POC (proof of concept), there are many points that can be improoved. That will be detailed in "Improvements" section.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## How it works
 
-## Expanding the ESLint configuration
+- User logs in
+- Selects a date
+- Adjust shift and branch
+- Search and/or export result
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
-
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
-
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
-
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
-
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+## Possible improvements
+- Fetch branches and shifts, not use hardcoded values
+- Move fetch and parse of json to a separate worker
+- Change layout of date selection back to date range
+- (Some kind of caching in backend to speedup process of exporting after displaying json format)
+- More filters
+- Custom ordenation 
